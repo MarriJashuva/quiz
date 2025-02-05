@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+         /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #8E2DE2, #4A00E0);
+        }
+        .home-container{
+           text-align: center;
+           padding-top: 140px;
+           color: white;
+        }
+        .brain{
+            width: 280px;
+        }
+        .title{
+            font-size: 40px; 
+            border-bottom: 2px solid rgb(13, 72, 161);
+            margin-left: 650px;
+            margin-right: 650px;
+            /*padding-bottom:12px*/
+    
+        }
+        .sub-title{
+            font-size: 20px;
+            margin-top: 65px;
+        }
+
+        .btn{
+            margin-top: 10px;
+            font-size: 20px;  
+            color: white; 
+            padding: 12px 25px;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(to right, #9938ee, #4d0fc7);
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="home-container">
+         <img src="brain-gym.png"/ class="brain">
+         <h1 class="title">Quiz App</h1>
+         <p class="sub-title">Test your knowledge with this app</p>
+         <button class="btn" onclick="render()">Play Now!</button>
+    </div>
+    <script>
+        function render(){
+            var name = prompt("Enter Your Name");
+    if (name) {
+        alert("Hello, " + name + "!");
+        localStorage.setItem("userName", name); // Store the name in localStorage
+        window.location.href = "dash.html"; // Redirect to inner.html
+    } else {
+        alert("You didn't enter your name.");
+    }
+        }
+    </script>
+</body>
+</html>
