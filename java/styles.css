@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6e2def, #8E2DE2);
+}
+
+#container {}
+
+#question {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-left: 170px;
+    margin-right: 170px;
+    text-justify: distribute;
+    align-items: center;
+    justify-content: center;
+}
+
+#subcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.choice {
+    background: linear-gradient(to right, #8503f6, #5403f7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(139, 137, 137);
+    cursor: pointer;
+    padding-top: 10%;
+    height: 250px;
+    color: white;
+    font-size: 20px;
+    text-justify: distribute;
+}
+
+.choice:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#timer-container {
+    width: 100%;
+    height: 10px;
+    border-bottom: 0.01px solid lightgray;
+    background-color: lightgray;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: width 1s linear;
+}
+
+/* Result Card Styles */
+.result-card {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    margin: 50px auto;
+    background: linear-gradient(to right, #8503f6, #5403f7);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(139, 137, 137);
+    padding: 0 20px 20px 20px;
+    color: white;
+    display: none; /* Hide it initially */
+}
+
+#result-message {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#result-score {
+    font-size: 18px;
+    color: white;
+}
+/* Play Again Button Style */
+.play-again-btn {
+    background-color: #5a07e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.play-again-btn:hover {
+    background-color: #4462e9;
+}
+
+.play-again-btn:active {
+    transform: scale(0.98);
+}
